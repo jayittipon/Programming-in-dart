@@ -31,7 +31,7 @@ double sdList(List<int> x) {
   for (int i = 0; i < x.length; i++) {
     ex = x[i] - avgList(x); //xi-xBar
     ex2 = pow(ex, 2); //xi-xBar ยกกำลัง 2
-    sum = sum + ex2; //นำค่า(xi-xBar)กำลัง2 มารวมกัน
+    sum = sum + ex2; //นำค่า(xi-xBar)กำลัง2 มาบวกกัน
   }
   b = sum / (n - 1); //นำค่ามาหาร n-1
   sd = sqrt(b); //นำมา square root
