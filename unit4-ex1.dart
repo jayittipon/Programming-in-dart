@@ -2,7 +2,7 @@ import 'dart:math';
 import 'dart:io';
 //ให้เขียนโปรแกรมเพื่อหาผลรวมของ list x=[1,2,3,4,5,6,7,8,9,10] โดยสร้างฟังก์ชัน โดยมีหน้าที่ส่ง list ให้ฟังก์ชัน แสดงค่าผลรวม , ค่าเฉลี่ย ,ส่วนเบี่ยงเบนมาตรฐาน
 
-//นำค่าใน list มาบวกกัน
+//นำค่าใน list มาบวกกันทั้งหมด
 int sumList(List<int> x) {
   int sum = 0;
   for (int i = 0; i < x.length; i++) {
@@ -27,8 +27,8 @@ double sdList(List<int> x) {
   //n จำนวนเลขทั้งหมด
   int n;
   double sum = 0, ex = 0, ex2 = 0, b, sd;
-
-  n = x.length;
+  n = x.length; // จำนวนเลขทั้งหมด
+  //นำ (xi-xBar)กำลัง2 มาบวกกัน
   for (int i = 0; i < x.length; i++) {
     ex = x[i] - avgList(x); //xi-xBar
     ex2 = pow(ex, 2); //xi-xBar ยกกำลัง 2
@@ -41,10 +41,7 @@ double sdList(List<int> x) {
 
 void main(List<String> args) {
   List<int> k = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-  print('The total value of the list is ${sumList(k)}');
-
-  print('The average value of the list is ${avgList(k)}');
-
-  print('The standard deviation value of the list is ${sdList(k).toStringAsFixed(4)}');
+  print('The total value of the list is ${sumList(k)}'); //แสดงผลรวม
+  print('The average value of the list is ${avgList(k)}'); //แสดงค่าเฉลี่ย
+  print('The standard deviation value of the list is ${sdList(k).toStringAsFixed(4)}'); //แสดงส่วนเบี่ยงเบนมาตรฐาน
 }
