@@ -1,5 +1,5 @@
 import 'dart:io';
-//1. จงออกแบบคลาสเครื่องคิดเลข ที่สามารถรับค่าตัวเลขได้สองตัว และ สามารถ บวก ลบ ได้
+//3. จงออกแบบคลาสเครื่องคิดเลข ที่สามารถรับค่าตัวเลขได้สองตัว และ สามารถ บวก ลบ คูณ หาร ได้
 
 class calculator {
   int x;
@@ -13,7 +13,7 @@ class calculator {
   }
 
   String inputChar() {
-    stdout.write('Input a character + -: ');
+    stdout.write('Input a character + - * /: ');
     var s = stdin.readLineSync();
     return s;
   }
@@ -23,6 +23,10 @@ class calculator {
       print('$x + $y = ${x + y}');
     else if (c == '-')
       print('$x - $y = ${x - y}');
+    else if (c == '*')
+      print('$x * $y = ${x * y}');
+    else if (c == '/')
+      print('$x / $y = ${x / y}');
     else
       print('Error');
   }
