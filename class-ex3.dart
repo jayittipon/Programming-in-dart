@@ -2,9 +2,11 @@ import 'dart:io';
 //3. จงออกแบบคลาสเครื่องคิดเลข ที่สามารถรับค่าตัวเลขได้สองตัว และ สามารถ บวก ลบ คูณ หาร ได้
 
 class calculator {
-  int x;
-  int y;
-  String c;
+  int x;//input 1
+  int y;//input 2
+  String c;//operation
+  
+  //รับค่าตัวเลข
   int inputNumber() {
     stdout.write('Input number: ');
     var s = stdin.readLineSync();
@@ -12,30 +14,32 @@ class calculator {
     return x;
   }
 
+  //รับค่า operation
   String inputChar() {
     stdout.write('Input a character + - * /: ');
     var s = stdin.readLineSync();
     return s;
   }
 
+  //แสดงผล
   void showCal() {
     if (c == '+')
-      print('$x + $y = ${x + y}');
+      print('$x + $y = ${x + y}');//บวก
     else if (c == '-')
-      print('$x - $y = ${x - y}');
+      print('$x - $y = ${x - y}');//ลบ
     else if (c == '*')
-      print('$x * $y = ${x * y}');
+      print('$x * $y = ${x * y}');//คูณ
     else if (c == '/')
-      print('$x / $y = ${x / y}');
+      print('$x / $y = ${x / y}');//หาร
     else
       print('Error');
   }
 }
 
 void main() {
-  calculator cal = new calculator();
-  cal.x = cal.inputNumber();
-  cal.y = cal.inputNumber();
-  cal.c = cal.inputChar();
-  cal.showCal();
+  calculator cal = new calculator();//Class cal
+  cal.x = cal.inputNumber();//รับค่าตัวเลขชุดที่1
+  cal.y = cal.inputNumber();//รับค่าตัวเลขชุดที่2
+  cal.c = cal.inputChar();//รับค่า operation
+  cal.showCal();//แสดงผล
 }

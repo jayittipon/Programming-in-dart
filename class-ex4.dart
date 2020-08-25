@@ -1,3 +1,4 @@
+import 'dart:io';
 //4. จากแบบฝึกหัดหน้า 25-26 จงออกแบบคลาสรถหกล้อเพิ่มและเก็บอายุยาง หกเส้น
 
 class vehicle {
@@ -41,7 +42,7 @@ class car extends vehicle{
 }
 
 void main() {
-  car m8=new car();
+  car m8=new car();//Class m8
   m8.setBrand('HINO');//กำหนดค่ายี่ห้อ
   m8.setModel('FC9JLLA');//กำหนดค่ารุ่น
   m8.setColor('White');//กำหนดค่าสี
